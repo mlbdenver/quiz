@@ -1,0 +1,441 @@
+@import url(http://fonts.googleapis.com/css?family=Cabin:400,700|The+Girl+Next+Door|Josefin+Sans:400,700|Architects+Daughter|Open+Sans|Raleway:400,700|Signika:400,700,600,300);
+
+/*Notes
+
+
+*/
+/*--------CSS RESET ---------- */
+
+/* 
+html5doctor.com Reset Stylesheet v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:62.5%;
+    vertical-align:baseline;
+    background:transparent;
+}
+body {
+    line-height:1;
+}
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+    display:block;
+}
+ul {
+    list-style:disc;
+}
+blockquote, q {
+    quotes:none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+a {
+    margin:0;
+    padding:0;
+    vertical-align:baseline;
+    background:transparent;
+}
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000; 
+    font-style:italic;
+    font-weight:bold;
+}
+del {
+    text-decoration: line-through;
+}
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;   
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+input, select {
+    vertical-align:middle;
+}
+
+/*--------Beginning of Site CSS---------- */
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ /*---Use for site building ---
+
+div {
+  border:1px red solid;
+  } */
+
+body {
+  width:100%;
+  margin: 0;
+  padding:0;
+  font-family: "Architects Daughter", Arial, sans-serif;
+  font-size:1.8rem;
+  background-color: #E9E9CC;
+  overflow:hidden;
+}
+
+.cherry {
+  display: none;
+}
+/* Hiding for now-----------
+#cherries {
+      padding: 50px 0;
+      background: #c9dbe9;
+      background: -webkit-linear-gradient(top, #c9dbe9 0%, #fff 100%);
+      background: -linear-gradient(top, #c9dbe9 0%, #fff 100%);
+      background: -moz-linear-gradient(top, #c9dbe9 0%, #fff 100%);
+}
+.cherry {
+      background: url("../images/ghost_cherry.png") no-repeat;
+}
+.x1 {
+      -webkit-animation: moveclouds 15s linear infinite;
+      -moz-animation: moveclouds 15s linear infinite;
+      -o-animation: moveclouds 15s linear infinite;
+}
+.x2 {
+      left: 200px;
+      
+      -webkit-transform: scale(0.6);
+      -moz-transform: scale(0.6);
+      transform: scale(0.6);
+      opacity: 0.6; 
+      -webkit-animation: moveclouds 25s linear infinite;
+      -moz-animation: moveclouds 25s linear infinite;
+      -o-animation: moveclouds 25s linear infinite;
+}
+.x3 {
+      left: -250px; top: -200px;
+      
+      -webkit-transform: scale(0.8);
+      -moz-transform: scale(0.8);
+      transform: scale(0.8);
+      opacity: 0.8; 
+      
+      -webkit-animation: moveclouds 20s linear infinite;
+      -moz-animation: moveclouds 20s linear infinite;
+      -o-animation: moveclouds 20s linear infinite;
+}
+.x4 {
+      left: 470px; top: -250px;
+      
+      -webkit-transform: scale(0.75);
+      -moz-transform: scale(0.75);
+      transform: scale(0.75);
+      opacity: 0.75; 
+      
+      -webkit-animation: moveclouds 18s linear infinite;
+      -moz-animation: moveclouds 18s linear infinite;
+      -o-animation: moveclouds 18s linear infinite;
+}
+.x5 {
+      left: -150px; top: -150px;
+      
+      -webkit-transform: scale(0.8);
+      -moz-transform: scale(0.8);
+      transform: scale(0.8);
+      opacity: 0.8; 
+      -webkit-animation: moveclouds 20s linear infinite;
+      -moz-animation: moveclouds 20s linear infinite;
+      -o-animation: moveclouds 20s linear infinite;
+}
+
+@-webkit-keyframes moveclouds {
+      0% {margin-left: 1000px;}
+      100% {margin-left: -1000px;}
+}
+@-moz-keyframes moveclouds {
+      0% {margin-left: 1000px;}
+      100% {margin-left: -1000px;}
+}
+@-o-keyframes moveclouds {
+      0% {margin-left: 1000px;}
+      100% {margin-left: -1000px;}
+}
+---------------*/
+h1 h2 h3 h4 {
+    font-weight: normal;
+ }
+
+h1 {
+    font-size: 5rem;
+  line-height: 6rem;
+ }
+
+h2 {
+  font-size: 4rem;
+  line-height: 4.6rem;
+  }
+h3{
+  font-size: 3rem;
+  line-height: 3.6rem;
+}
+h4, li {
+  font-size: 2.4rem;
+  line-height: 3rem;
+}
+p {
+  font-size:2rem;
+  line-height: 2.4rem;
+
+}
+.main {
+  max-width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+}
+
+.banner {
+  height: 60px;
+  width: 100%;
+  padding: 20px 20px 0px 20px;
+  text-align: right;
+  color: white;
+  font-family:"Architects Daughter", Arial, Sans-serif;
+}
+
+#new {
+font-size: 1.6rem;
+text-decoration: none;
+color: white;
+cursor: pointer;
+  padding: .5rem 1rem;
+  border-radius: 2px;
+  color: #fef4e9;
+  background: #E76171;
+  text-align: center;
+  text-shadow: 1px 1px rgba(0,0,0,.3);
+  vertical-align: middle;
+  box-shadow: 0 1px 2px rgba(0,0,0,.2);
+  font-family: "open sans", Arial, sans-serif;
+  margin-top: 30px;
+}
+#new:hover{
+  background-color: #DB4E5D;
+}
+
+.quiz {
+      width:72%;
+      float: left;
+      text-align: center;
+}
+#box {
+  width: 600px;
+  height: 640px;
+  margin: auto;
+  padding: 20px;
+  background-color: #85CFCF;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 2px rgba(0,0,0,.2);
+  position:relative;
+      }
+
+#box li {
+  list-style-type: none;
+  text-align: left;
+}
+#box h1 {
+      background: #593B27;
+      background-image:  linear-gradient(rgba(255,255,255,.3), rgba(255,255,255,0));
+    -moz-box-shadow: 0 2px 0 rgba(0,0,0,.3);
+    -webkit-box-shadow: 0 2px 0 rgba(0,0,0,.3);
+    box-shadow: 0 2px 0 rgba(0,0,0,.3);
+      margin: 0px -30px 10px -30px;
+      text-align: center;
+      position: relative;
+      color: white;
+      padding: 10px 0;
+}
+
+#box h1:before, 
+#box h1:after {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-color: transparent;
+    bottom: -10px;
+}
+
+#box h1:before {
+    border-width: 0 10px 10px 0;
+    border-right-color: #3E2115;
+    left: 0;
+}
+
+#box h1:after {
+    border-width: 0 0 10px 10px;
+    border-left-color: #3E2115;
+    right: 0;
+}
+#questNum {
+      font-size: 3rem;
+      background: #C4BF56;
+      background-image:  linear-gradient(rgba(255,255,255,.3), rgba(255,255,255,0));
+    -moz-box-shadow: 0 2px 0 rgba(0,0,0,.3);
+    -webkit-box-shadow: 0 2px 0 rgba(0,0,0,.3);
+    box-shadow: 0 2px 0 rgba(0,0,0,.3);
+      margin: 0px 350px 10px -30px;
+      text-align: left;
+      padding-left: 30px;
+      position: relative;
+      color: white;
+}
+
+#questNum:before, 
+#questNum:after {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-color: transparent;
+    bottom: -10px;
+}
+
+#questNum:before {
+    border-width: 0 10px 10px 0;
+    border-right-color: #3E2115;
+    left: 0;
+}
+#box #score {
+      font-size: 2rem;
+      background: #593B27;
+      background-image:  linear-gradient(rgba(255,255,255,.3), rgba(255,255,255,0));
+    -moz-box-shadow: 0 2px 0 rgba(0,0,0,.3);
+    -webkit-box-shadow: 0 2px 0 rgba(0,0,0,.3);
+    box-shadow: 0 2px 0 rgba(0,0,0,.3);
+      margin: 10px;
+      text-align: right;
+      position: absolute;
+      bottom: 10px;
+      right: -20px;
+      color: white;
+      padding: 10px;
+}
+
+#box #score:before, 
+#box #score:after {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-color: transparent;
+    bottom: -10px;
+}
+
+#box #score:after {
+    border-width: 0 0 10px 10px;
+    border-left-color: #3E2115;
+    right: 0;
+}
+
+.drawing {
+      width: 28%;
+      float: right;
+      text-align: center;
+}
+.drawing img {
+      width: auto;
+  max-height: 600px;
+  margin: auto;
+}
+
+
+#begin, #submit, #next{
+  cursor: pointer;
+  font-size: 2rem;
+  padding: .5rem 1rem;
+  margin-top:10px;
+  line-height: 2.0rem;
+  border-radius: .5rem;
+  color: #fef4e9;
+  background: #E76171;
+  text-align: center;
+  text-shadow: 1px 1px rgba(0,0,0,.3);
+  vertical-align: middle;
+  box-shadow: 0 1px 2px rgba(0,0,0,.2);
+  font-family: "open sans";
+}
+
+#button:hover, #new:hover{
+  background-color: #DB4E5D;
+}
+#cherry {
+    position: absolute;
+    width:100px;
+    height: 100px;
+}
+#cherry.move{
+    -webkit-animation: myanim 5s;
+    animation: myanim 5s;
+}
+@-webkit-keyframes myanim
+{
+0%   {top:0;left:0; width: 100px; height: 100px;}
+66%  {top:0;left:800px; width:100px;height:100px;}
+67%  {top:0;left:800px; width:200px; height: 200px;}
+100% {top:0; left:0; width: 200px; height:200px;}
+}
+@keyframes myanim
+{
+0%   {top:0;left:0; width: 100px; height: 100px;}
+66%  {top:0;left:800px; width:100px;height:100px;}
+67%  {top:0;left:800px; width:200px; height: 200px;}
+100% {top:0; left:0; width: 200px; height:200px;}
+}
+
+
+.
+
+@media (max-width: 640px) {
+.main {
+
+}
+.main img {
+display: none;
+}
+
+}
+
