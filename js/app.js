@@ -4,28 +4,28 @@ $(document).ready(function() {
 /*---Set Questions and Answers---*/
     var question = [
         {
-            number: 1,
+            number: "Question #1",
             quest: "What is the most popular flavor of ice cream in the US?",
             answers:["Chocolate", "Vanilla", "Pistacio", "Strawberry"],
             correct: 1,
             corrAns:"Vanilla is the most popular flavor of ice cream in the US, accounting for 20% to 29% of all ice cream purchased!",
         },
         {
-            number: 2,
+            number: "Question #2",
             quest: "We know Americans love ice cream. But which country consumes the second most ice cream per capital?",
             answers:["Canada", "England", "New Zealand", "Sweden"],
             correct: 2,
             corrAns:"New Zealanders love there ice cream too!",
         },
         {
-            number: 3,
+            number: "Question #3",
             quest: "Which of the following is not a Ben & Jerry's Ice Cream flavor?",
             answers:["Karamel Sutra", "Chubby Hubby", "Half Baked", "Sherbert Holmes"],
             correct: 3,
             corrAns:"Sherbery Holmes is not a real Ben & Jerry's Flavor.",
         },
         {
-            number: 4,
+            number: "Question #4",
             quest: "How many gallons of ice cream are produced in the US per year?",
             answers:["2 million", "50 million", "350 million", "800 million"],
             correct: 3,
@@ -33,7 +33,7 @@ $(document).ready(function() {
         },
 
         {
-            number: 5,
+            number: "Question #5",
             quest: "On which day of the week is the most ice cream consumed?",
             answers:["Sunday", "Wednesday", "Friday", "Saturday"],
             correct: 0,
@@ -59,6 +59,7 @@ $(document).ready(function() {
         questAns = 0;
         $("#score").hide();
         $("#submit").hide();
+        $("#submit").prop("disabled", true);
         $("#next").hide();
         $("#new").hide();
         $("#questNum").hide();
@@ -86,42 +87,79 @@ $(document).ready(function() {
     /*--- Display Question and Answers ---*/
     function askQuest() {
         console.log("Question number " + questNum);
-            $("#questText").html(question[questAns].quest);
-            $("#choice1").append(question[questAns].answers[0]);
-            $("#choice2").append(question[questAns].answers[1]);
-            $("#choice3").append(question[questAns].answers[2]);
-            $("#choice4").append(question[questAns].answers[3]);
-            $("#questNum").append(" " + questNum);
+            $("#questText").text(question[questAns].quest);
+            $("#1stChoice").text(question[questAns].answers[0]);
+            $("#2ndChoice").text(question[questAns].answers[1]);
+            $("#3rdChoice").text(question[questAns].answers[2]);
+            $("#4thChoice").text(question[questAns].answers[3]);
+            $("#questNum").text(question[questAns].number);
             $("#score").show();
-            $("#score").append(correctAns +"/" + questAns);
+            $("#corrAns").hide();
+            $("#submit").show();
+            $("#next").hide();
+            $(":radio").click(function() {
+                $("#submit").prop("disabled",false);
+            });
+
     };
        
     
    
-    /*--- Accept Guess and Display Respose---
+    /*--- Accept Guess and Display Respose---*/
     
-    $("#submit").click(function() {
-        var userGuess = $("input[type="radio"]:checked").val();
-        if(userGuess === undefined) {
-            $("#corrAns").text("Please make a selection");
-        }
-        else if (userGuess == question[questAns].correct) {
+    $("body").on('click', '#submit', function() {
+        var userGuess = $("input[type='radio']:checked").val();
+        $("#submit").hide();
+        if (userGuess == question[questAns].correct) {
             console.log("userGuess is "+ userGuess);
-            console.log("correct is " + correct);
-            $(#corrAns").text("CORRECT!");
+            console.log("correct");
+            $("#corrAns").show();
+            $("#corrAns").text("CORRECT! ");
             correctAns ++;
+            questAns++;
+            if(questAns === 5) {
+                $("#score").addClass("final");
+               $("#score").text("Your final score is " + correctAns +"/" + questAns);
+               return;
+            }
+            else {
             $("#next").show();
-            $("#enterChoice").hide();
+            $("#score").text("Current score: " + correctAns +"/" + questAns);
+            }
+            
         }
         else {
             console.log("wrong");
-            $(#corrAns").text("WRONG!" + question[guestAns].corrAns);
+            $("#corrAns").show();
+            $("#corrAns").text("WRONG! " + question[questAns].corrAns);
+            questAns++;
+            $("#score").text("Current score: " + correctAns +"/" + questAns);
+            if(questAns === 5) {
+                 $("#score").addClass("final");
+               $("#score").text("Your final score is " + correctAns +"/" + questAns);
+               return;
+            }
             $("#next").show();
-            $("#enterChoice").hide();
-        }
-    }); */
             
-    
+        }
+    }); 
+
+    /*--- Progress to next question---*/
+    $("#next").click(function() {
+        $("input:checked").removeAttr("checked");
+                  askQuest ();
+        
+    });     
+
+    /*function clear() {
+        $("#questText").remove();
+            $("#choice1").remove();
+            $("#choice2").remove();
+            $("#choice3").remove();
+            $("#choice4").remove();
+            $("#questNum").remove();
+            $("#score").remove();
+    }*/
 
 });
 

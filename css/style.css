@@ -213,7 +213,7 @@ h3{
   font-size: 3rem;
   line-height: 3.6rem;
 }
-h4, li {
+h4, label, #corrAns {
   font-size: 2.4rem;
   line-height: 3rem;
 }
@@ -370,7 +370,12 @@ cursor: pointer;
     border-left-color: #3E2115;
     right: 0;
 }
-
+.final {
+  background-color: #DB4E5D !important;
+}
+#corrAns {
+  padding-top: 20px;
+}
 .drawing {
       width: 28%;
       float: right;
@@ -399,6 +404,9 @@ cursor: pointer;
   font-family: "open sans";
 }
 
+#submit:disabled {
+  background: gray;
+}
 #button:hover, #new:hover{
   background-color: #DB4E5D;
 }

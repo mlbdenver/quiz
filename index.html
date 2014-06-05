@@ -20,30 +20,31 @@
         <div class="quiz">
             <div id="box">
                 <h1>Ice Cream Quiz</h1>
-                <h2 id="questNum">Question #</h2>
+                <h2 id="questNum"></h2>
                 <h3 id="questText">How much do you really know about everyone's favorite chilly treat? Test your knowledge of the best dessert ever!</h3>
                 <ul>
-                    <li id="choice1">
+                    <li>
                         <input type="radio" name="choice" id="choice1" value="0">
-                        <span id="1stChoice"></span>
+                        <label id="1stChoice" for="choice1"></label>
                     </li>
-                    <li id="choice2">
+                    <li>
                         <input type="radio" name="choice" id="choice2" value="1">
-                        <span id="2ndChoice"></span>
+                        <label id="2ndChoice" for="choice2"></label>
                     </li>
-                    <li id="choice3">
+                    <li>
                         <input type="radio" name="choice" id="choice3" value="2">
-                        <span id="3rdChoice"></span>
+                        <label id="3rdChoice" for="choice3"></label>
                     </li>
-                    <li id="choice4">
+                    <li>
                         <input type="radio" name="choice" id="choice4" value="3">
-                        <span id="4thChoice"></span></li>
+                        <label id="4thChoice" for="choice4"></label>
                 </ul>
-                <input type="submit" id="begin" value="Begin">
+                <div id="corrAns"></div>
+                <input type="submit" id="begin" value="Begin" >
                 <input type="submit" id="submit" value="Submit">
                 <input type="submit" id="next" value="Next">
-                <div id="corrAns"></div>
-                <p id="score">Current score: </p>
+                
+                <div id="score"></div>
             </div>
         </div>
         <div class="drawing">
