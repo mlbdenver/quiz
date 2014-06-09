@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Cabin:400,700|The+Girl+Next+Door|Josefin+Sans:400,700|Architects+Daughter|Open+Sans|Raleway:400,700|Signika:400,700,600,300);
+@import url(http://fonts.googleapis.com/css?family=Cabin:400,700|The+Girl+Next+Door|Josefin+Sans:400,700|Handlee|Open+Sans|Lato:300,400|Signika:400,700,600,300);
 
 /*Notes
 
@@ -110,92 +110,22 @@ div {
 body {
   width:100%;
   margin: 0;
-  padding:0;
-  font-family: "Architects Daughter", Arial, sans-serif;
+  padding:24px 0;
+  font-family: Handlee, Arial, sans-serif;
   font-size:1.8rem;
-  background-color: #E9E9CC;
-  overflow:hidden;
+  background-image: url('../images/ghost_cherry.png');
+  background-size: 40px;
+  background-repeat: repeat;
+    //overflow:hidden;
 }
 
-.cherry {
-  display: none;
+.quiz {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex; 
 }
-/* Hiding for now-----------
-#cherries {
-      padding: 50px 0;
-      background: #c9dbe9;
-      background: -webkit-linear-gradient(top, #c9dbe9 0%, #fff 100%);
-      background: -linear-gradient(top, #c9dbe9 0%, #fff 100%);
-      background: -moz-linear-gradient(top, #c9dbe9 0%, #fff 100%);
-}
-.cherry {
-      background: url("../images/ghost_cherry.png") no-repeat;
-}
-.x1 {
-      -webkit-animation: moveclouds 15s linear infinite;
-      -moz-animation: moveclouds 15s linear infinite;
-      -o-animation: moveclouds 15s linear infinite;
-}
-.x2 {
-      left: 200px;
-      
-      -webkit-transform: scale(0.6);
-      -moz-transform: scale(0.6);
-      transform: scale(0.6);
-      opacity: 0.6; 
-      -webkit-animation: moveclouds 25s linear infinite;
-      -moz-animation: moveclouds 25s linear infinite;
-      -o-animation: moveclouds 25s linear infinite;
-}
-.x3 {
-      left: -250px; top: -200px;
-      
-      -webkit-transform: scale(0.8);
-      -moz-transform: scale(0.8);
-      transform: scale(0.8);
-      opacity: 0.8; 
-      
-      -webkit-animation: moveclouds 20s linear infinite;
-      -moz-animation: moveclouds 20s linear infinite;
-      -o-animation: moveclouds 20s linear infinite;
-}
-.x4 {
-      left: 470px; top: -250px;
-      
-      -webkit-transform: scale(0.75);
-      -moz-transform: scale(0.75);
-      transform: scale(0.75);
-      opacity: 0.75; 
-      
-      -webkit-animation: moveclouds 18s linear infinite;
-      -moz-animation: moveclouds 18s linear infinite;
-      -o-animation: moveclouds 18s linear infinite;
-}
-.x5 {
-      left: -150px; top: -150px;
-      
-      -webkit-transform: scale(0.8);
-      -moz-transform: scale(0.8);
-      transform: scale(0.8);
-      opacity: 0.8; 
-      -webkit-animation: moveclouds 20s linear infinite;
-      -moz-animation: moveclouds 20s linear infinite;
-      -o-animation: moveclouds 20s linear infinite;
-}
-
-@-webkit-keyframes moveclouds {
-      0% {margin-left: 1000px;}
-      100% {margin-left: -1000px;}
-}
-@-moz-keyframes moveclouds {
-      0% {margin-left: 1000px;}
-      100% {margin-left: -1000px;}
-}
-@-o-keyframes moveclouds {
-      0% {margin-left: 1000px;}
-      100% {margin-left: -1000px;}
-}
----------------*/
 h1 h2 h3 h4 {
     font-weight: normal;
  }
@@ -220,22 +150,6 @@ h4, label, #corrAns {
 p {
   font-size:2rem;
   line-height: 2.4rem;
-
-}
-.main {
-  max-width: 100%;
-  margin-right: auto;
-  margin-left: auto;
-  position: relative;
-}
-
-.banner {
-  height: 60px;
-  width: 100%;
-  padding: 20px 20px 0px 20px;
-  text-align: right;
-  color: white;
-  font-family:"Architects Daughter", Arial, Sans-serif;
 }
 
 #new {
@@ -249,18 +163,23 @@ cursor: pointer;
   background: #E76171;
   text-align: center;
   text-shadow: 1px 1px rgba(0,0,0,.3);
-  vertical-align: middle;
   box-shadow: 0 1px 2px rgba(0,0,0,.2);
-  font-family: "open sans", Arial, sans-serif;
+  font-family: Lato, Arial, sans-serif;
+  font-weight: 300;
   margin-top: 30px;
+  position: absolute;
+      bottom: 10px;
+      left: 20px;
 }
 #new:hover{
   background-color: #DB4E5D;
 }
 
 .quiz {
-      width:72%;
-      float: left;
+  width:100%;
+  background-image: url('../images/bokeh-pattern.png');
+  background-repeat: no-repeat;
+  background-position: center;
       text-align: center;
 }
 #box {
@@ -376,17 +295,6 @@ cursor: pointer;
 #corrAns {
   padding-top: 20px;
 }
-.drawing {
-      width: 28%;
-      float: right;
-      text-align: center;
-}
-.drawing img {
-      width: auto;
-  max-height: 600px;
-  margin: auto;
-}
-
 
 #begin, #submit, #next{
   cursor: pointer;
@@ -401,7 +309,8 @@ cursor: pointer;
   text-shadow: 1px 1px rgba(0,0,0,.3);
   vertical-align: middle;
   box-shadow: 0 1px 2px rgba(0,0,0,.2);
-  font-family: "open sans";
+  font-family: Lato, Arial, Helvetica;
+  font-weight: 300;
 }
 
 #submit:disabled {
@@ -410,32 +319,12 @@ cursor: pointer;
 #button:hover, #new:hover{
   background-color: #DB4E5D;
 }
-#cherry {
-    position: absolute;
-    width:100px;
-    height: 100px;
-}
-#cherry.move{
-    -webkit-animation: myanim 5s;
-    animation: myanim 5s;
-}
-@-webkit-keyframes myanim
-{
-0%   {top:0;left:0; width: 100px; height: 100px;}
-66%  {top:0;left:800px; width:100px;height:100px;}
-67%  {top:0;left:800px; width:200px; height: 200px;}
-100% {top:0; left:0; width: 200px; height:200px;}
-}
-@keyframes myanim
-{
-0%   {top:0;left:0; width: 100px; height: 100px;}
-66%  {top:0;left:800px; width:100px;height:100px;}
-67%  {top:0;left:800px; width:200px; height: 200px;}
-100% {top:0; left:0; width: 200px; height:200px;}
-}
+#cone {
+  display: none;
+  width: 100px;
+  height: 150px;
+ }
 
-
-.
 
 @media (max-width: 640px) {
 .main {
@@ -446,4 +335,11 @@ display: none;
 }
 
 }
-
+/*.banner {
+  height: 60px;
+  width: 100%;
+  padding: 20px 20px 0px 20px;
+  text-align: right;
+  color: white;
+  font-family:Handlee, Arial, Sans-serif;
+}*/
